@@ -2,3 +2,30 @@
 @model lab7.Pages.Films.AddModel
 @{
 }
+<div class="container">
+	@if (HttpContext.Request.Method == "POST")
+	{
+		<h2>@Model.Firstname</h2>
+		<h4>Ваш вік: @Model.Age років </h4>
+	}
+	@if(Model.ErrorMessage is not null)
+	{
+		<div class="alert alert-danger" role="alert">
+			@Model.ErrorMessage
+		</div>
+	}
+	<form method="post">
+		<div class="mb-3">
+			<label class="form-label">Назва фільму</label>
+			<input type="text" name="title" id="tit" class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Режисер</label>
+			<input type="text" name="filmmaker" id="film" class="form-control" />
+		</div>
+		<div class="mb-3">
+			<button type="submit" class="btn btn-primary">Створити</button>
+		</div>
+	</form>
+
+</div>

@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace lab7.Pages
+namespace lab7.Pages.Movies
 {
-    public class IndexModel : PageModel
+    public class AboutModel : PageModel
     {
         public void OnGet()
         {
